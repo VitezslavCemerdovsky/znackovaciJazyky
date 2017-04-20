@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Odkaz na github: https://github.com/VitezslavCemerdovsky/znackovaciJazyky --> 
+<aplikace-hudba>
+    
+<nastaveni-aplikace>
+    <charset>UTF-8</charset>
+    <jazyk>CZ</jazyk>
+    <nastaveni-modulu>
+        <hodnoceni-hudby>1</hodnoceni-hudby>
+        <komentare>1</komentare>
+        <vyhledavani>1</vyhledavani>
+        <sdileni>1</sdileni>
+        <prehravac>1</prehravac>
+        <obchod>1</obchod>
+    </nastaveni-modulu>
+</nastaveni-aplikace>    
+
+<opravneni-uzivatelu>
+    <typ-uzivatele Uzivatel="Host">
+        <pravo-hodnotit>0</pravo-hodnotit>
+        <pravo-prehrat>1</pravo-prehrat>
+        <pravo-komentovat>0</pravo-komentovat>
+        <pravo-sledovat-komentare>1</pravo-sledovat-komentare>
+        <pravo-editace-komentu>0</pravo-editace-komentu>
+        <pravo-pridani-hudby>0</pravo-pridani-hudby>
+        <pravo-odebrani-hudby>0</pravo-odebrani-hudby>
+    </typ-uzivatele>
+        <typ-uzivatele Uzivatel="Prihlaseny uzivatel">
+        <pravo-hodnotit>1</pravo-hodnotit>
+        <pravo-prehrat>1</pravo-prehrat>
+        <pravo-komentovat>1</pravo-komentovat>
+        <pravo-sledovat-komentare>1</pravo-sledovat-komentare>
+        <pravo-editace-komentu>0</pravo-editace-komentu>
+        <pravo-pridani-hudby>1</pravo-pridani-hudby>
+        <pravo-odebrani-hudby>0</pravo-odebrani-hudby>
+    </typ-uzivatele>
+        <typ-uzivatele Uzivatel="Admin">
+        <pravo-hodnotit>1</pravo-hodnotit>
+        <pravo-prehrat>1</pravo-prehrat>
+        <pravo-komentovat>1</pravo-komentovat>
+        <pravo-sledovat-komentare>1</pravo-sledovat-komentare>
+        <pravo-editace-komentu>1</pravo-editace-komentu>
+        <pravo-pridani-hudby>1</pravo-pridani-hudby>
+        <pravo-odebrani-hudby>1</pravo-odebrani-hudby>
+    </typ-uzivatele>
+</opravneni-uzivatelu>
+
+<ucet-uzivatele>
+    <ucet idc="0" pohlavi="muz">
+        <prezdivka>Lipo</prezdivka>
+        <typ-uzivatele>Admin</typ-uzivatele>
+        <zaliby>metal</zaliby>
+        <email spravnost-email="1">lipomil@gmail.com</email>
+        <rok-narozeni kontrola-veku="1">1989</rok-narozeni>
+        <datum-zalozeni>1.5.2005</datum-zalozeni>
+        <narodnost>CZ</narodnost>
+        <bydliste>Praha</bydliste>
+        <pratele>Rudík</pratele>
+    </ucet>
+     <ucet idc="1" pohlavi="muz">
+        <prezdivka>Majkys</prezdivka>
+        <typ-uzivatele>Prihlaseny uzivatel</typ-uzivatele>
+        <zaliby>rock</zaliby>
+        <email spravnost-email="1">majkys@gmail.com</email>
+        <rok-narozeni kontrola-veku="1">1994</rok-narozeni>
+        <datum-zalozeni >2.5.2005</datum-zalozeni>
+        <narodnost>CZ</narodnost>
+        <bydliste>Brno</bydliste>
+        <pratele>Petr</pratele>
+    </ucet>
+    <ucet idc="2" pohlavi="muz">
+        <prezdivka>Rudík</prezdivka>
+        <typ-uzivatele>Prihlaseny uzivatel</typ-uzivatele>
+        <zaliby>metal, rock</zaliby>
+        <email spravnost-email="1">rudikh@gmail.com</email>
+        <rok-narozeni kontrola-veku="1">1992</rok-narozeni>
+        <datum-zalozeni>2.5.2005</datum-zalozeni>
+        <narodnost>SK</narodnost>
+        <bydliste>Praha</bydliste>
+        <pratele>Lipo</pratele>
+    </ucet>
+    <ucet idc="3" pohlavi="muz">
+        <prezdivka>Hydra</prezdivka>
+        <typ-uzivatele>Prihlaseny uzivatel</typ-uzivatele>
+        <zaliby>dubstep</zaliby>
+        <email spravnost-email="1">hydrah@gmail.com</email>
+        <rok-narozeni kontrola-veku="1">1996</rok-narozeni>
+        <datum-zalozeni>2.5.2007</datum-zalozeni>
+        <narodnost>CZ</narodnost>
+        <bydliste>Ostrava</bydliste>
+        <pratele>Ksychtr</pratele>
+    </ucet>
+    <ucet idc="4" pohlavi="muz">
+        <prezdivka>Jenca</prezdivka>
+        <typ-uzivatele>Admin</typ-uzivatele>
+        <zaliby>romantika</zaliby>
+        <email spravnost-email="1">jencah@gmail.com</email>
+        <rok-narozeni kontrola-veku="1">1998</rok-narozeni>
+        <datum-zalozeni>2.5.2005</datum-zalozeni>
+        <narodnost>CZ</narodnost>
+        <bydliste>Praha</bydliste>
+        <pratele>Unpalup</pratele>
+    </ucet>
+</ucet-uzivatele>
+
+
+<seznam-hudby>
+    <hudba idh="0" zanr="rock">
+    <nazev>Eclips</nazev>
+    <autor>Bob Majkl</autor>
+    <zdroj>Bob Majkl</zdroj>
+    <rok-vydani>2008</rok-vydani>
+    <delka>4:31</delka>
+    <jazyk-hudby>EN</jazyk-hudby>
+    <kvalita-zvuku>22</kvalita-zvuku>
+    <hodnoceni>2</hodnoceni>
+    <pocet-shlednuti>15214</pocet-shlednuti>
+    <cena>235</cena>
+    <text>bla bla</text>
+    <video enabled="true">
+        <rozliseni>720p</rozliseni>
+        <fps>30</fps>
+    </video>
+    </hudba>
+        <hudba idh="1" zanr="metal">
+    <nazev>Parek</nazev>
+    <autor>Petr Novak</autor>
+    <zdroj>Valka parezu</zdroj>
+    <rok-vydani>2016</rok-vydani>
+    <delka>1:58</delka>
+    <jazyk-hudby>neuveden</jazyk-hudby>
+    <kvalita-zvuku>34</kvalita-zvuku>
+    <hodnoceni>9</hodnoceni>
+    <pocet-shlednuti>458</pocet-shlednuti>
+    <cena>99</cena>
+    <text>Pisen neobsahuje text</text>
+    <video enabled="true">
+        <rozliseni>1080p</rozliseni>
+        <fps>60</fps>
+    </video>
+    </hudba>
+        <hudba idh="2" zanr="dubstep">
+    <nazev>Rachejtle</nazev>
+    <autor>Tezky Marek</autor>
+    <zdroj>Tezky Marek</zdroj>
+    <rok-vydani>2009</rok-vydani>
+    <delka>3:05</delka>
+    <jazyk-hudby>CZ</jazyk-hudby>
+    <kvalita-zvuku>22</kvalita-zvuku>
+    <hodnoceni>7</hodnoceni>
+    <pocet-shlednuti>124</pocet-shlednuti>
+    <cena>58</cena>
+    <text>bla bla</text>
+    <video enabled="true">
+        <rozliseni>720p</rozliseni>
+        <fps>30</fps>
+    </video>
+    </hudba>
+        <hudba idh="3" zanr="rock">
+    <nazev>Latibrox</nazev>
+    <autor>Emanuel Jhinkels</autor>
+    <zdroj>Emanuel Jhinkels</zdroj>
+    <rok-vydani>1995</rok-vydani>
+    <delka>5:36</delka>
+    <jazyk-hudby>EN</jazyk-hudby>
+    <kvalita-zvuku>34</kvalita-zvuku>
+    <hodnoceni>10</hodnoceni>
+    <pocet-shlednuti>8754</pocet-shlednuti>
+    <cena>49</cena>
+    <text>bla bla</text>
+    <video enabled="true">
+        <rozliseni>1080p</rozliseni>
+        <fps>60</fps>
+    </video>
+    </hudba>
+        <hudba idh="4" zanr="pop">
+    <nazev>Clever</nazev>
+    <autor>Ocutar Milan</autor>
+    <zdroj>Linteon</zdroj>
+    <rok-vydani>2015</rok-vydani>
+    <delka>1:55</delka>
+    <jazyk-hudby>SK</jazyk-hudby>
+    <kvalita-zvuku>22</kvalita-zvuku>
+    <hodnoceni>8</hodnoceni>
+    <pocet-shlednuti>12453</pocet-shlednuti>
+    <cena>99</cena>
+    <text>bla bla</text>
+    <video enabled="true">
+        <rozliseni>720p</rozliseni>
+        <fps>30</fps>
+    </video>
+    </hudba>
+</seznam-hudby>
+
+</aplikace-hudba>

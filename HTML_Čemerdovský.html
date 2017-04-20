@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<!-- Odkaz na github: https://github.com/VitezslavCemerdovsky/znackovaciJazyky --> 
+<html>
+    <head>
+        <title>Vítězslav Čemerdovský - dokumentace HTML</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container">
+        <header>
+            <h3>Odkazy k projektu</h3>
+            <nav>
+                <ul>
+                    <li><a href="#uvod">Úvod</a></li>
+                    <li><a href="nazev">Název</a></li>
+                    <li><a href="#metodika">Metodika</a></li>
+                    <li><a href="#popisea">Popis elementů a atributů</a></li>
+                    <li><a href="#popist">Popis transformace</a></li>
+                    <li><a href="#zaver">Závěr</a></li>
+                    <li><a href="#particka">Partička</a></li>
+                </ul>
+            </nav>
+        </header>
+    <main>
+        <article>
+            <header>
+                <h1 id="nazev">Vítězslav Čemerdovský - dokumentace HTML</h1>
+            </header>
+            <section>
+                
+                <nav>
+                    
+                </nav>
+                <h2 id="uvod">Úvod</h2>
+                <p>Při této semestrální práci sem si zvolil aplikaci s hudbou.</p>
+                <p>Lidé zde mají své vlastní účty, pomocí kterých mohou využívat různé vlastnosti stránky, jako např. přehrání hudby z databáze nebo její koupě.</p>
+                <p>Inspirováno stránkou CSFD. Součástí souborů práce je nastavení aplikace a mírně vyplněná její databáze.</p>
+                <h2 id="metodika">Metodika</h2>
+                <p>Při tvorbě byly využity stránky, pro sběr informací a validaci souborů, jako: <a href="https://www.w3schools.com/">W3Schools</a>,<a href="https://validator.w3.org/">ValidátorW3 </a>, <a href="https://moodle.czu.cz/">Moodle</a> a <a href="https://stackoverflow.com">StackOverflow</a>.</p>
+                <p>Využity programy: Google Chrome a NetBeans.
+                <h2 id="popisea">Popis elementů a atributů</h2>
+                <table border="1">
+                    <tr>
+                        <th>Název elementu</th>
+                        <th>Popis elementu</th>
+                        <th>Omezení elementu</th>
+                    </tr>
+                    <tr>
+                        <td>aplikace-hudba</td>
+                        <td>Element nesoucí název aplikace</td>
+                        <td>Bez omezení</td>
+                    </tr>
+                    <tr>
+                        <td>nastaveni-aplikace</td>
+                        <td>Určuje základní nastavení</td>
+                        <td>Bez omezení</td>
+                    </tr>
+                    <tr>
+                        <td>charset</td>
+                        <td>Určuje, jaký charset je využit</td>
+                        <td>UTF-8</td>
+                    </tr>
+                    <tr>
+                        <td>jazyk</td>
+                        <td>Určuje, který jazyk je zvolen</td>
+                        <td>CZ, SK, EN</td>
+                    </tr>
+                    <tr>
+                        <td>nastaveni-modulu</td>
+                        <td>Obklopuje používané moduly</td>
+                        <td>Bez omezení</td>
+                    </tr>
+                    <tr>
+                        <td>hodnoceni-hudby</td>
+                        <td>Povoluje používání modulu hodnocení hudby</td>
+                        <td>0, 1</td>
+                    </tr>
+                    <tr>
+                        <td>komentare</td>
+                        <td>Povoluje používání modulu komentaře</td>
+                        <td>0, 1</td>
+                    </tr>
+                    <tr>
+                        <td>vyhledavani</td>
+                        <td>Povoluje používání modulu vyhledávání</td>
+                        <td>0, 1</td>
+                    </tr>
+                    <tr>
+                        <td>sdileni</td>
+                        <td>Povoluje používání modulu sdílení</td>
+                        <td>0, 1</td>
+                    </tr>
+                    <tr>
+                        <td>prehravac</td>
+                        <td>Povoluje používání modulu přehravač</td>
+                        <td>0, 1</td>
+                    </tr>
+                    <tr>
+                        <td>obchod</td>
+                        <td>Povoluje používání modulu obchod</td>
+                        <td>0, 1</td>
+                    </tr>
+                    <tr>
+                        <td>opravneni-uzivatelu</td>
+                        <td>Zaobaluje typy uživatelů v aplikaci a jejich pravomoce</td>
+                        <td>Bez omezení</td>
+                    </tr>
+                    <tr>
+                        <td>typ-uzivatele</td>
+                        <td>Definuje jednotlivé úrovně uživatelů</td>
+                        <td>Host, Přihlášený uživatel, Admin</td>
+                    </tr>
+                    <tr>
+                        <td>pravo-hodnotit</td>
+                        <td>Povoluje hodnotit hudbu</td>
+                        <td>0, 1</td>
+                    </tr>
+                    <tr>
+                        <td>pravo-prehrat</td>
+                        <td>Povoluje přehrát hudbu</td>
+                        <td>0, 1</td>
+                    </tr>
+                    <tr>
+                        <td>pravo-komentovat</td>
+                        <td>Povoluje komentovat hudbu</td>
+                        <td>0, 1</td>
+                    </tr>
+                    <tr>
+                        <td>pravo-sledovat-komentare</td>
+                        <td>Povoluje sledovat komentáře ostatních uživatelů</td>
+                        <td>0, 1</td>
+                    </tr>
+                    <tr>
+                        <td>pravo-editace-komentu</td>
+                        <td>Povoluje editovat všechny komentaře</td>
+                        <td>0, 1</td>
+                    </tr>
+                    <tr>
+                        <td>pravo-pridani-hudby/td>
+                        <td>Povoluje přidat hudbu do seznamu</td>
+                        <td>0, 1</td>
+                    </tr>
+                    <tr>
+                        <td>pravo-odebrani-hudby</td>
+                        <td>Povoluje odebírat hudbu ze seznamu</td>
+                        <td>0, 1</td>
+                    </tr>
+                    <tr>
+                        <td>ucet-uzivatele</td>
+                        <td>Zaobaluje všechny uživatele v aplikaci</td>
+                        <td>Bez omezení</td>
+                    </tr>
+                    <tr>
+                        <td>ucet</td>
+                        <td>Jednotlivé účty uživatelů</td>
+                        <td>Bez omezení</td>
+                    </tr>
+                    <tr>
+                        <td>prezdivka</td>
+                        <td>Určuje přezdívku</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>zaliby</td>
+                        <td>Určuje záliby</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>email</td>
+                        <td>Určuje email</td>
+                        <td>spravnost-email</td>
+                    </tr>
+                    <tr>
+                        <td>rok-narozeni</td>
+                        <td>Určuje rok narození</td>
+                        <td>kontrola-veku</td>
+                    </tr>
+                    <tr>
+                        <td>datum-zalozeni</td>
+                        <td>Určuje, kdy byl účet založen</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>narodnost</td>
+                        <td>Určuje národnost</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>bydliste</td>
+                        <td>Určuje bydliště</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>pratele</td>
+                        <td>Určuje zaznamenané přátele</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>seznam-hudby</td>
+                        <td>Zaobaluje všechnu hudbu v aplikaci</td>
+                        <td>Bez omezení</td>
+                    </tr>
+                    <tr>
+                        <td>hudba</td>
+                        <td>Element definující jednotlivé skladby v seznamu</td>
+                        <td>Bez omezení</td>
+                    </tr>
+                    <tr>
+                        <td>nazev</td>
+                        <td>Určuje název</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>autor</td>
+                        <td>Určuje autora hudby</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>zdroj</td>
+                        <td>Určuje zdroj, pro který byla vytvořena</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>rok-vydani</td>
+                        <td>Určuje rok vydání</td>
+                        <td>0-2017</td>
+                    </tr>
+                    <tr>
+                        <td>delka</td>
+                        <td>Určuje časovou délku</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>jazyk-hudby</td>
+                        <td>Určuje jazyk písně</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>kvalita-zvuku</td>
+                        <td>Určuje kvalitu zvuku</td>
+                        <td>22-40</td>
+                    </tr>
+                    <tr>
+                        <td>hodnoceni></td>
+                        <td>Určuje celkové hodnocení hudby</td>
+                        <td>0-10</td>
+                    </tr>
+                    <tr>
+                        <td>pocet-shlednuti</td>
+                        <td>Určuje počet shlednutí</td>
+                        <td>Short</td>
+                    </tr>
+                    <tr>
+                        <td>cena</td>
+                        <td>Určuje prodejní cenu</td>
+                        <td>0-999</td>
+                    </tr>
+                    <tr>
+                        <td>text</td>
+                        <td>Určuje text písně, jestli je k dispozici</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>video</td>
+                        <td>Zaobaluje obecné informace o videu</td>
+                        <td>Bez omezení</td>
+                    </tr>
+                    <tr>
+                        <td>rozliseni</td>
+                        <td>Určuje rozližení videa</td>
+                        <td>720p, 1080p</td>
+                    </tr>
+                    <tr>
+                        <td>fps</td>
+                        <td>Určuje fps u videa</td>
+                        <td>30, 60</td>
+                    </tr>
+                </table>
+                <p></p>
+                <table border="1">
+                    <tr>
+                        <th>Název atributu</th>
+                        <th>Popis atributu</th>
+                        <th>Omezení atributu</th>
+                    </tr>
+                    <tr>
+                        <td>Uzivatel</td>
+                        <td>Uvádí název typu uživatele</td>
+                        <td>Host, Přihlášený uživatel, Admin</td>
+                    </tr>
+                    <tr>
+                        <td>idc</td>
+                        <td>Zaručuje jedinečnost uživatele</td>
+                        <td>0-999999</td>
+                    </tr>
+                    <tr>
+                        <td>pohlavi</td>
+                        <td>Určuje pohlaví uživatele</td>
+                        <td>muž, žena</td>
+                    </tr>
+                    <tr>
+                        <td>spravnost-email</td>
+                        <td>Zaručuje korektnost emailu</td>
+                        <td>String, pattern "[^@]+@[^\.]+\..+"</td>
+                    </tr>
+                    <tr>
+                        <td>kontrola-veku</td>
+                        <td>Zaručuje uvádění realného věku</td>
+                        <td>1900-2017</td>
+                    </tr>
+                    <tr>
+                        <td>idh</td>
+                        <td>Zaručuje jediněčnost hudby v seznamu</td>
+                        <td>0-999999</td>
+                    </tr>
+                    <tr>
+                        <td>zanr</td>
+                        <td>Uvádí žánr</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>enabled</td>
+                        <td>Atribut povolující přidání videa</td>
+                        <td>true, false</td>
+                    </tr>
+                </table>
+                <h2 id="popist">Popis transformace</h2>
+                <p>Pro transformaci do HTML sem využil cyklu for-each, který vypíše všechny uživatele v seznamu a základní informace o hudbě (Žánr, Název, Autor, Zdroj, Rok vydání, Délka a Jazyk hudby), která vyšla po roce 2009. </p>
+                
+                <h2 id="zaver">Závěr</h2>
+                <p>Díky této semestrální práci sem se dobře seznámil s jazykem XML a myslím, že se mi v budoucnu bude určitě hodit.</p>
+                <p>V aplikaci je spousta neřešených problémů realného světa, ale jako hrubý náčrt, by měla být dostačující.</p>
+                <h2 id="particka">Partička</h2>
+                <p>Autor: Vítězslav Čemerdovský | Česká Zemědělská Univerzita v Praze | 20.04.2017</p>
+            </section>    
+        </article>        
+    </main>
+        </div>
+    </body>
+</html>

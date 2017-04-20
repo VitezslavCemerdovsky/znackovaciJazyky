@@ -1,0 +1,212 @@
+<!-- Odkaz na github: https://github.com/VitezslavCemerdovsky/znackovaciJazyky --> 
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="aplikace-hudba">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nastaveni-aplikace">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="chs" name="charset"/>
+              <xs:element type="jzk" name="jazyk"/>
+              <xs:element name="nastaveni-modulu">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="ano-ne" name="hodnoceni-hudby"/>
+                    <xs:element type="ano-ne" name="komentare"/>
+                    <xs:element type="ano-ne" name="vyhledavani"/>
+                    <xs:element type="ano-ne" name="sdileni"/>
+                    <xs:element type="ano-ne" name="prehravac"/>
+                    <xs:element type="ano-ne" name="obchod"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="opravneni-uzivatelu">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="typ-uzivatele" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="ano-ne" name="pravo-hodnotit"/>
+                    <xs:element type="ano-ne" name="pravo-prehrat"/>
+                    <xs:element type="ano-ne" name="pravo-komentovat"/>
+                    <xs:element type="ano-ne" name="pravo-sledovat-komentare"/>
+                    <xs:element type="ano-ne" name="pravo-editace-komentu"/>
+                    <xs:element type="ano-ne" name="pravo-pridani-hudby"/>
+                    <xs:element type="ano-ne" name="pravo-odebrani-hudby"/>
+                  </xs:sequence>
+                  <xs:attribute type="typ-u" name="Uzivatel" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ucet-uzivatele">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ucet" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="prezdivka"/>
+                    <xs:element type="typ-u" name="typ-uzivatele"/>
+                    <xs:element type="xs:string" name="zaliby"/>
+                    <xs:element name="email">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:byte" name="spravnost-email" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="rok-narozeni">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:short">
+                            <xs:attribute type="xs:byte" name="kontrola-veku" use="required"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="datum-zalozeni"/>
+                    <xs:element type="xs:string" name="narodnost"/>
+                    <xs:element type="xs:string" name="bydliste"/>
+                    <xs:element type="xs:string" name="pratele"/>
+                  </xs:sequence>
+                  <xs:attribute type="id" name="idc" use="required"/>
+                  <xs:attribute type="poh" name="pohlavi" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="seznam-hudby">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="hudba" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="nazev"/>
+                    <xs:element type="xs:string" name="autor"/>
+                    <xs:element type="xs:string" name="zdroj"/>
+                    <xs:element type="rokv" name="rok-vydani"/>
+                    <xs:element type="xs:string" name="delka"/>
+                    <xs:element type="xs:string" name="jazyk-hudby"/>
+                    <xs:element type="kvalz" name="kvalita-zvuku"/>
+                    <xs:element type="hod" name="hodnoceni"/>
+                    <xs:element type="xs:short" name="pocet-shlednuti"/>
+                    <xs:element type="cena" name="cena"/>
+                    <xs:element type="xs:string" name="text"/>
+                    <xs:element name="video">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="roz" name="rozliseni"/>
+                          <xs:element type="fps" name="fps"/>
+                        </xs:sequence>
+                        <xs:attribute type="enable" name="enabled" use="required"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="id" name="idh" use="required"/>
+                  <xs:attribute type="xs:string" name="zanr" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="chs">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="UTF-8"/>
+    </xs:restriction>
+  </xs:simpleType> 
+<xs:simpleType name="jzk">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CZ"/>
+      <xs:enumeration value="SK"/>
+      <xs:enumeration value="EN"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ano-ne">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="typ-u">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Host"/>
+      <xs:enumeration value="Prihlaseny uzivatel"/>
+      <xs:enumeration value="Admin"/>
+    </xs:restriction>
+  </xs:simpleType> 
+  <xs:simpleType name="kontrola-veku">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1900"/>
+      <xs:maxInclusive value="2017"/>
+    </xs:restriction>
+  </xs:simpleType> 
+  <xs:simpleType name="id">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="999999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="poh">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="muz"/>
+      <xs:enumeration value="zena"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="rokv">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="2017"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="kvalz">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="22"/>
+      <xs:maxInclusive value="40"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="hod">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="10"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="cena">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="999"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="roz">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="720p"/>
+      <xs:enumeration value="1080p"/>
+    </xs:restriction>
+  </xs:simpleType>
+      <xs:simpleType name="fps">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="30"/>
+      <xs:enumeration value="60"/>
+    </xs:restriction>
+  </xs:simpleType>
+      <xs:simpleType name="enable">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="true"/>
+      <xs:enumeration value="false"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="spravnost-email">
+    <xs:restriction base="xs:string">
+       <xs:pattern value="[^@]+@[^\.]+\..+"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
